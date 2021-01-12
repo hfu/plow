@@ -14,10 +14,10 @@
   "sources": {
     "i": {
       "attribution": "国土地理院のベクトルタイルから作成",
-      "maxzoom": 15,
+      "maxzoom": 16,
       "minzoom": 10,
       "tiles": [
-        "http://192.168.86.24:9966/img/{z}/{x}/{y}.png"
+        "https://hfu.github.io/plow/img/{z}/{x}/{y}.png"
       ],
       "type": "raster"
     }

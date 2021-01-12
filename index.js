@@ -12,9 +12,11 @@ const tile2lat = (y, z) => {
 }
 
 const jumpInto = async (page, z, x, y) => {
-  await page.goto(`https://hfu.github.io/plow/#${z}/${tile2lat(y + 0.5, z)}/${tile2long(x + 0.5, z)}`)
+  await page.goto(
+    `https://hfu.github.io/plow/#${z}/${tile2lat(y + 0.5, z)}/${tile2long(x + 0.5, z)}`
+  )
   await page.waitForNavigation()
-  await page.waitForTimeout(100)
+  await page.waitForTimeout(1500)
   const path = `docs/img/${z}/${x}/${y}.png`
   await page.screenshot({
     path: path,
@@ -42,6 +44,7 @@ const jumpInto = async (page, z, x, y) => {
   })
   await page.goto(`https://hfu.github.io/plow/#8/32.7528/129.888`)
   await page.waitForTimeout(2000)
+  await jumpInto(page, Z, X, Y)
   await jumpInto(page, Z, X, Y)
   await browser.close()
 })(10, 881, 413)
