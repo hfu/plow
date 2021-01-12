@@ -16,9 +16,10 @@ body { margin: 0; top: 0; bottom: 0; width: 100%; }
 <script>
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'style.json',
-  attributionControl: false,
-  hash: true
+  style: 'img.json',
+  attributionControl: true,
+  hash: true,
+  localIdeographFontFamily: "'sans-serif','NotoSansCJKjp'"
 })
 
 map.on('load', function () {

@@ -1,0 +1,27 @@
+{
+  "center": [
+    129.880513,
+    32.750986
+  ],
+  "layers": [
+    {
+      "id": "i",
+      "maxzoom": 22,
+      "source": "i",
+      "type": "raster"
+    }
+  ],
+  "sources": {
+    "i": {
+      "attribution": "国土地理院のベクトルタイルから作成",
+      "maxzoom": 15,
+      "minzoom": 10,
+      "tiles": [
+        "http://192.168.86.24:9966/img/{z}/{x}/{y}.png"
+      ],
+      "type": "raster"
+    }
+  },
+  "version": 8,
+  "zoom": 14
+}
