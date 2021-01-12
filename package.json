@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:hfu/plow",
   "author": "FUJIMURA Hidenori <hfu@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.7.1"
+  }
 }

@@ -18,15 +18,10 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaGZ1IiwiYSI6ImlRSGJVUTAifQ.rTx380smyvPc1gUfZv
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'style.json',
-  attributionControl: true,
+  attributionControl: false,
   hash: true,
   localIdeographFontFamily: "'sans-serif','NotoSansCJKjp'"
 })
-
-map.addControl(new mapboxgl.NavigationControl())
-map.addControl(new mapboxgl.ScaleControl({
-  maxWidth: 200, unit: 'metric'
-}))
 
 map.on('load', function () {
 })
