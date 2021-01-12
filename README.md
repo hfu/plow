@@ -5,11 +5,11 @@ PlayWright を使ってベクトルタイルを画像タイルにレンダリン
 
 ## 画像タイルレンダリング前
 
-[![](img/vector-tiles.jpeg)](https://hfu.github.io/plow/)
+[![](img/vector-tiles.jpg)](https://hfu.github.io/plow/)
 
 ## 画像タイルレンダリング後
 
-[![](img/image-tiles.jpeg)](https://hfu.github.io/plow/img.html)
+[![](img/image-tiles.jpg)](https://hfu.github.io/plow/img.html)
 
 ## ファイル説明
 
