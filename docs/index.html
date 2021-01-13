@@ -18,7 +18,10 @@ const map = new mapboxgl.Map({
   container: 'map',
   style: 'style.json',
   attributionControl: false,
-  hash: true
+  hash: true,
+  interactive: false,
+  antialias: true,
+  fadeDuration: 0
 })
 
 map.on('load', function () {
