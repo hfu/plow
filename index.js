@@ -1,4 +1,4 @@
-const { chromium } = require('playwright');
+const { chromium } = require('playwright')
 
 const MAXZ = 16
 
@@ -16,13 +16,13 @@ const jumpInto = async (page, z, x, y) => {
     `https://hfu.github.io/plow/#${z}/${tile2lat(y + 0.5, z)}/${tile2long(x + 0.5, z)}`
   )
   await page.waitForNavigation()
-  await page.waitForTimeout(1500)
+  await page.waitForTimeout(2500 * (MAXZ - z))
   const path = `docs/img/${z}/${x}/${y}.png`
   await page.screenshot({
     path: path,
     clip: {
-      x: 256,
-      y: 256,
+      x: 128,
+      y: 128,
       width: 512,
       height: 512
     }
@@ -38,14 +38,13 @@ const jumpInto = async (page, z, x, y) => {
 }
 
 (async (Z, X, Y) => {
-  const browser = await chromium.launch()
+  const browser = await chromium.launch({ headless: false })
   const page = await browser.newPage({
-    viewport: { width: 1024, height: 1024 }
+    viewport: { width: 768, height: 768 }
   })
   await page.goto(`https://hfu.github.io/plow/#8/32.7528/129.888`)
-  await page.waitForTimeout(2000)
+  await page.waitForTimeout(3000)
   await jumpInto(page, Z, X, Y)
   await jumpInto(page, Z, X, Y)
   await browser.close()
 })(10, 881, 413)
-
